@@ -1,3 +1,8 @@
+# Reference
++ This repository is forked from [Livox-SDK/livox_laser_simulation](https://github.com/Livox-SDK/livox_laser_simulation) and modified to be compatible with ubuntu 20.04 and ROS Noetic.
++ refer this repository [Mid360_simulation_plugin](https://github.com/fratopa/Mid360_simulation_plugin) for the modification.
++  The original repository is developed by Livox-SDK and the original README.md is kept in this repository.
+
 # Livox Laser Simulation
 A package to provide plug-in for [Livox Series LiDAR](https://www.livoxtech.com).
 
