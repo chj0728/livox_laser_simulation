@@ -29,7 +29,7 @@ generate_messages(DEPENDENCIES
 )
 
 #To solve the error which gazebo does not handle the include file well, we must add this line.
-include_directories(/usr/include/gazebo-11/gazebo)
+# include_directories(/usr/include/gazebo-11/gazebo)
 
 link_directories(${GAZEBO_LIBRARY_DIRS})
 
@@ -50,6 +50,9 @@ catkin_package(
 
 add_library(livox_laser_simulation SHARED src/livox_points_plugin.cpp src/livox_ode_multiray_shape.cpp)
 add_dependencies(livox_laser_simulation ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(livox_laser_simulation ${catkin_LIBRARIES} RayPlugin)
+target_link_libraries(livox_laser_simulation 
+${catkin_LIBRARIES} 
+RayPlugin 
+protobuf)
 
-target_link_libraries(livox_laser_simulation libprotobuf.so.9)
+# target_link_libraries(livox_laser_simulation libprotobuf.so.9)
